@@ -6,7 +6,7 @@
 }
 
 body{
-    margin: 30px;
+    margin: 1.87rem;
     min-height: 100vh;
     height: 100%;
     background-color: #f3f3f6;
@@ -32,7 +32,7 @@ body{
 }
 
 header{
-    margin-bottom: 30px;
+    margin-bottom: 1.87rem;
 }
 
 header h1{
@@ -105,7 +105,7 @@ a{
 .check-info{
     font-size: 20px;
     color: #9c9090;
-    height: 30px;
+    height: 1.87rem;
     padding-top: 6px;
     font-weight: 700;
 }
@@ -180,7 +180,7 @@ a{
 .card1, .card3{
     background-color: white;
     height: 400px;
-    margin-top: 30px;
+    margin-top: 1.87rem;
 }
 
 .card1{
@@ -200,7 +200,7 @@ a{
 .card2{
     background-color: #4852de;
     height: 440px;
-    position: relative; /* Indispensable pour que top: 10px fonctionne */
+    position: relative; 
     top: 10px;
     border-radius: 10px;
     color: white;
@@ -215,7 +215,6 @@ a{
 
 .l-btn:active{
     color: #4852de;
-    border: normal;
     background-color: transparent;
     border: 1.5px solid rgba(10, 18, 92, 0.691);
 }
@@ -246,15 +245,15 @@ a{
     transform: translateY(-10px);
 }
 
-@media screen and (min-width:700px) and (max-width:1000px){
-main{
-    display:grid;
-    grid-template-columns:repeat(2,320px);
-    justify-content:center;
-    align-items: center;
-    gap:0;
-    width: fit-content;
-}
+@media screen and (min-width:43.75rem) and (max-width:62.5rem){
+    main{
+        display:grid;
+        grid-template-columns:repeat(2,320px);
+        justify-content:center;
+        align-items: center;
+        gap:0;
+        width: fit-content;
+    }
 
     .card3, .card2, .card1{
         height: 430px;
@@ -273,7 +272,7 @@ main{
 }
 
 /* MEDIA QUERY POUR LE RESPONSIVE MOBILE */
-@media screen and (max-width: 700px) {
+@media screen and (max-width:43.75rem) {
     body {
         height: auto;
         margin: 20px 10px;
@@ -281,18 +280,26 @@ main{
 
     main {
         width: auto;
-        flex-direction: column; /* Passe les cartes en colonne une par une */
+        flex-direction: column; 
         align-items: center;
     }
 
     .card1, .card2, .card3 {
-        width: 100%; /* Chaque carte prend toute la largeur disponible */
+        width: 100%; 
         min-width: 350px;
         height: auto;
         min-height: 450px;
         margin-top: 20px;
-        position: static; /* Annule le décalage de la carte 2 sur mobile */
-        border-radius: 10px; /* Redonne des bordures arrondies propres à toutes les cartes en mode empilé */
+        position: static; 
+        border-radius: 10px; 
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

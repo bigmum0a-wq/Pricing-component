@@ -1,14 +1,13 @@
 document.addEventListener('DOMContentLoaded', () =>{
-    
+
     const input =       document.querySelector('input');
     const basicPrice =  document.querySelector('#basic');
     const proPrice =    document.querySelector('#pro');
     const masterPrice = document.getElementById('master');
 
 
-    input.addEventListener('click', () =>{
-        console.log('OKAY')
-
+    input.addEventListener('click', (e) =>{
+        
         if(input.checked)
         {
             basicPrice.textContent = '199.99'
