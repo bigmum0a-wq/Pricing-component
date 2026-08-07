@@ -56,7 +56,7 @@ git clone https://github.com/bigmum0a-wq/Pricing-component.git
 2. Navigate to the project directory:
 
 ```bash
-cd Pricing-component-page
+cd Pricing-component
 ```
 
 3. Open the application:
@@ -74,7 +74,7 @@ You can also run it using a local development server such as the VS Code Live Se
 ## Project Structure
 
 ```
-Pricing-component-page
+Pricing-component
 │
 ├── LICENSE
 ├── README.md
