@@ -41,6 +41,47 @@ aside h1{
     text-align: center;
 }
 
+input:checked + .slider{
+    background: #4852de;
+}
+
+
+
+input:checked + .slider::before{
+    transform: translateX(0px); 
+}
+
+main{
+    display: flex;
+    height: auto;
+    width: 60rem;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+button{
+    margin-top: 20px;
+    padding:12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: .5em;
+    border: none;
+    font-weight: 900;
+}
+
+footer{
+    margin-top: 40px;
+    padding: 10px;
+    color: rgba(45, 42, 42, 0.692);
+    font-family: Impact, Haettenschweiler,  sans-serif;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+}
+
 .switch{
     position: relative;
     display: inline-block;
@@ -98,24 +139,7 @@ aside h1{
 
 
 
-input:checked + .slider{
-    background: #4852de;
-}
 
-
-
-input:checked + .slider::before{
-    transform: translateX(0px); 
-}
-
-main{
-    display: flex;
-    height: auto;
-    width: 60rem;
-    flex: 1;
-    flex-direction: row;
-    flex-wrap: wrap; 
-}
 
 
 .card1, .card2, .card3{
@@ -177,15 +201,7 @@ main{
     color: white;
 }
 
-button{
-    margin-top: 20px;
-    padding:12px;
-    width: 100%;
-    cursor: pointer;
-    border-radius: .5em;
-    border: none;
-    font-weight: 900;
-}
+
 
 .l-btn{
     color: white;
