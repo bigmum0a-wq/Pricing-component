@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Mentor solution link here]
-- Live Site URL: [https://bigmum0a-wq.github.io/Pricing-component-page/](https://bigmum0a-wq.github.io/Pricing-component-page/)
+- Live Site URL: [https://bigmum0a-wq.github.io/Pricing-component/](https://bigmum0a-wq.github.io/Pricing-component/)
 
 
 ## Getting Started
@@ -50,7 +50,7 @@ To run this project locally:
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/bigmum0a-wq/Pricing-component-page.git
+git clone https://github.com/bigmum0a-wq/Pricing-component.git
 ```
 
 2. Navigate to the project directory:
