@@ -31,11 +31,11 @@ body{
         300px;
 }
 
-aside{
+header{
     margin-bottom: 30px;
 }
 
-aside h1{
+header h1{
     color: #151414a1;
     margin: 25px auto;
     text-align: center;
@@ -80,6 +80,11 @@ footer{
 
 a{
     text-decoration: none;
+}
+
+.attribution a:focus,
+.attribution a:hover {
+    text-decoration: underline;
 }
 
 .switch{
