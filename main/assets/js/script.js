@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const masterPrice = document.getElementById('master');
 
 
-    input.addEventListener('click', (e) =>{
+    input.addEventListener('click', () =>{
         
         if(input.checked)
         {

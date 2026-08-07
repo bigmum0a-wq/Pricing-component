@@ -37,7 +37,7 @@ header{
 
 header h1{
     color: #151414a1;
-    margin: 25px auto;
+    margin:1.5625rem auto;
     text-align: center;
 }
 
@@ -45,11 +45,10 @@ input:checked + .slider{
     background: #4852de;
 }
 
-
-
 input:checked + .slider::before{
     transform: translateX(0px); 
 }
+
 
 main{
     display: flex;
@@ -78,13 +77,14 @@ footer{
     font-weight: 700;
 }
 
-a{
-    text-decoration: none;
+.attribution a{
+    color:inherit;
+    text-decoration:underline;
 }
 
-.attribution a:focus,
-.attribution a:hover {
-    text-decoration: underline;
+.attribution a:hover,
+.attribution a:focus{
+    opacity:0.8;
 }
 
 .switch{
@@ -100,6 +100,10 @@ a{
     width: 0;
     height: 0;
     position: absolute;
+}
+
+.switch input:focus-visible + .slider{
+    outline:3px solid #000;
 }
 
 .check-info{
@@ -141,10 +145,6 @@ a{
     transition: 0.3s;
     transform: translateX(26px);
 }
-
-
-
-
 
 
 .card1, .card2, .card3{
@@ -299,7 +299,8 @@ a{
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
     }
 }
