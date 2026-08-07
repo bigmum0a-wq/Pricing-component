@@ -1,0 +1,277 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    margin: 30px;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #f3f3f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:
+        url("../images/bg-top.svg"),
+        url("../images/bg-bottom.svg");
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
+
+    background-position:
+        top right,
+        bottom left;
+
+    background-size:
+        300px,
+        300px;
+}
+
+aside{
+    margin-bottom: 30px;
+}
+
+aside h1{
+    color: #151414a1;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin:0 20px ;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.check-info{
+    font-size: 20px;
+    color: #9c9090;
+    height: 30px;
+    padding-top: 6px;
+    font-weight: 700;
+}
+
+.check-element{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    padding-top: 15px;
+}
+
+.slider{
+    position: absolute;
+    inset: 0;
+    background: #4852de;
+    border-radius: 34px;
+    cursor: pointer;
+}
+
+.switch:active .slider{
+    background: #0202023b;
+}
+
+.slider::before{
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left:4px;
+    top: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    transform: translateX(26px);
+}
+
+
+
+input:checked + .slider{
+    background: #4852de;
+}
+
+
+
+input:checked + .slider::before{
+    transform: translateX(0px); 
+}
+
+main{
+    display: flex;
+    height: auto;
+    width: 60rem;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+
+.card1, .card2, .card3{
+    box-shadow: 0 20px 40px rgba(0, 40, 100, 0.12);
+    width: 320px; /* Ton pourcentage d'origine */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sb-title{
+    color: #040303b5;
+}
+
+.card1 p, .card2 p, .card3 p{
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(155, 124, 249, 0.658);
+    width: 100%;
+
+}
+
+.info-el{
+    font-weight: 700;
+}
+
+.card1 .info-el, .card3 .info-el{
+    color: #040303b5;
+}
+
+.card1, .card3{
+    background-color: white;
+    height: 400px;
+    margin-top: 30px;
+}
+
+.card1{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.monthly-prices{
+    color: #060608cf;
+}
+
+.card3{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card2{
+    background-color: #4852de;
+    height: 440px;
+    position: relative; /* Indispensable pour que top: 10px fonctionne */
+    top: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+button{
+    margin-top: 20px;
+    padding:12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: .5em;
+    border: none;
+    font-weight: 900;
+}
+
+.l-btn{
+    color: white;
+    background-color: #4852de;
+}
+
+.l-btn:active{
+    color: #4852de;
+    border: normal;
+    background-color: transparent;
+    border: 1.5px solid rgba(10, 18, 92, 0.691);
+}
+
+.m-btn{
+    color: #4852de;
+}
+
+.m-btn:active{
+    color: white;
+    background-color: transparent;
+    border: 1.5px solid rgb(252, 252, 252);
+
+}
+
+
+
+.price{
+    font-size: 70px;
+    font-weight: 900;
+    
+}
+
+.devise{
+    font-size: 40px;
+    font-weight: 800;
+    display: inline-block;
+    transform: translateY(-10px);
+}
+
+@media screen and (min-width:700px) and (max-width:1000px){
+main{
+    display:grid;
+    grid-template-columns:repeat(2,320px);
+    justify-content:center;
+    align-items: center;
+    gap:0;
+    width: fit-content;
+}
+
+    .card3, .card2, .card1{
+        height: 430px;
+        margin: 0;
+        border-radius: 10px;
+        top: 0;
+
+    }
+
+    .card3{
+        grid-column: 1/3;
+        margin-top: 10px;
+        justify-self: center;
+        left: 40%;
+    }
+}
+
+/* MEDIA QUERY POUR LE RESPONSIVE MOBILE */
+@media screen and (max-width: 700px) {
+    body {
+        height: auto;
+        margin: 20px 10px;
+    }
+
+    main {
+        width: auto;
+        flex-direction: column; /* Passe les cartes en colonne une par une */
+        align-items: center;
+    }
+
+    .card1, .card2, .card3 {
+        width: 100%; /* Chaque carte prend toute la largeur disponible */
+        min-width: 350px;
+        height: auto;
+        min-height: 450px;
+        margin-top: 20px;
+        position: static; /* Annule le décalage de la carte 2 sur mobile */
+        border-radius: 10px; /* Redonne des bordures arrondies propres à toutes les cartes en mode empilé */
+    }
+}
+
